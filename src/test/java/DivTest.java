@@ -25,7 +25,7 @@ public class DivTest extends BaseTest {
     }
 
     @Test(testName = "Division")
-    public void testDiv2() {
+    public void testDiv3() {
         Assert.assertEquals(calculator.div(6, 3), 2, "Неверная сумма...");
     }
 
