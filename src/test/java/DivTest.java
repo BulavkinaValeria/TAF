@@ -6,26 +6,35 @@ import org.testng.annotations.Test;
 
 public class DivTest extends BaseTest {
     @Test
-    public void testDiv() {
-        Assert.assertEquals(calculator.div(6, 3), 2, "Неверная сумма...");
+    public void testDivForInt() {
+        Assert.assertEquals(calculator.div(6, 3), 2, "Mistake...");
     }
 
     @Test(enabled = false)
-    public void testDiv1() {
-        Assert.assertEquals(calculator.div(6, 3), 2, "Неверная сумма...");
+    public void testDivForInt1() {
+        Assert.assertEquals(calculator.div(6, 3), 2, "Mistake...");
+    }
+    @Test
+    public void testDivForDouble() {
+        Assert.assertEquals(calculator.div(7.75, 3.1), 2.5, "Mistake...");
+    }
+
+    @Test(enabled = false)
+    public void testDivForDouble1() {
+        Assert.assertEquals(calculator.div(7.75, 3.1), 2.5, "Mistake...");
     }
 
     @Test(description = "Тест с описанием")
     public void testDiv2() {
-        Assert.assertEquals(calculator.div(6, 3), 2, "Неверная сумма...");
+        Assert.assertEquals(calculator.div(6, 3), 2, "Mistake...");
     }
 
     @Test(testName = "Division")
     public void testDiv3() {
-        Assert.assertEquals(calculator.div(6, 3), 2, "Неверная сумма...");
+        Assert.assertEquals(calculator.div(6, 3), 2, "Mistake...");
     }
 
-    /*   @Test(timeOut = 1000)
+      @Test(timeOut = 1000)
        public void waitLongTimeTest() throws InterruptedException {
            Thread.sleep(500);
        }
@@ -43,7 +52,7 @@ public class DivTest extends BaseTest {
         @Test(dataProvider = "dataForSum", dataProviderClass = StaticProvider.class, threadPoolSize = 3)
         public void testDataProvider(double a, double b, double expectedResult) {
             Assert.assertEquals(calculator.div(a, b), expectedResult, "Неверная сумма...");}
-        */
+
         @Test(expectedExceptions = ArithmeticException.class)
         public void testExceptions () {
             List list = null;
