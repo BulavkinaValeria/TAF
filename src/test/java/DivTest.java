@@ -14,6 +14,7 @@ public class DivTest extends BaseTest {
     public void testDivForInt1() {
         Assert.assertEquals(calculator.div(6, 3), 2, "Mistake...");
     }
+
     @Test
     public void testDivForDouble() {
         Assert.assertEquals(calculator.div(7.75, 3.1), 2.5, "Mistake...");
@@ -34,28 +35,34 @@ public class DivTest extends BaseTest {
         Assert.assertEquals(calculator.div(6, 3), 2, "Mistake...");
     }
 
-      @Test(timeOut = 1000)
-       public void waitLongTimeTest() throws InterruptedException {
-           Thread.sleep(500);
-       }
-
-       @Test (invocationCount = 3, invocationTimeOut = 1000, threadPoolSize = 3)
-       public void invocationCountTest() throws InterruptedException {
-           Thread.sleep(500);
-           Assert.assertEquals(calculator.div(6, 3), 2, "Неверная сумма...");
-       }
-
-       @Test (dataProvider = "dataForSum", dataProviderClass = StaticProvider.class, threadPoolSize = 3)
-       public void testDataProvider(int a, int b, int expectedResult) {
-           Assert.assertEquals(calculator.div(a, b), expectedResult, "Неверная сумма...");
-       }
-        @Test(dataProvider = "dataForSum", dataProviderClass = StaticProvider.class, threadPoolSize = 3)
-        public void testDataProvider(double a, double b, double expectedResult) {
-            Assert.assertEquals(calculator.div(a, b), expectedResult, "Неверная сумма...");}
-
-        @Test(expectedExceptions = ArithmeticException.class)
-        public void testExceptions () {
-            List list = null;
-            int size = list.size();
-        }
+    @Test(timeOut = 1000)
+    public void waitLongTimeTest() throws InterruptedException {
+        Thread.sleep(500);
     }
+
+    @Test(invocationCount = 3, invocationTimeOut = 1000, threadPoolSize = 3)
+    public void invocationCountTest() throws InterruptedException {
+        Thread.sleep(500);
+        Assert.assertEquals(calculator.div(6, 3), 2, "Неверная сумма...");
+    }
+
+    @Test(dataProvider = "dataForDivInt", dataProviderClass = StaticProvider.class, threadPoolSize = 3)
+    public void testDataProvider(int a, int b, int expectedResult) {
+        Assert.assertEquals(calculator.div(a, b), expectedResult, "Неверная сумма...");
+    }
+
+    @Test(dataProvider = "dataForDivInt2", dataProviderClass = StaticProvider.class, threadPoolSize = 3)
+    public void testDataProvider2(int a, int b, int expectedResult) {
+        Assert.assertEquals(calculator.div(a, b), expectedResult, "Неверная сумма...");
+    }
+
+    @Test(dataProvider = "dataForDivDouble", dataProviderClass = StaticProvider.class, threadPoolSize = 3)
+    public void testDataProvider(double a, double b, double expectedResult) {
+        Assert.assertEquals(calculator.div(a, b), expectedResult, "Неверная сумма...");
+    }
+
+    @Test(expectedExceptions = ArithmeticException.class)
+    public void testExceptions() {
+        Assert.assertEquals(calculator.div(3.15, 0), Double.POSITIVE_INFINITY, "Результат деления дробных чисел на '0' неверен");
+    }
+}
