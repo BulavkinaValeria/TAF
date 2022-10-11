@@ -37,7 +37,7 @@ public class BasicLocatorTest {
     }
         @Test
         public void basicLocatorsTest_2() {
-            driver.get(ReadProperties.getUrl());
+            driver.get(ReadProperties.getUrl()); //открывает сайт
 
            // Find webElement by linkText
             driver.findElement(By.linkText("Forgot your password?")).click();
