@@ -3,6 +3,7 @@ package test;
 import configuration.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -103,7 +104,15 @@ public class CssSelectorsTest {
         // Поиск элемента с тэгом p и которым является n-ым дочерним элементом
         Assert.assertEquals(1, driver.findElements(By.cssSelector("p:nth-child(2)")).size());
 
+    }
 
 
+    @Test
+    public void test1() {
+        driver.get("file:D:\\java\\TAF\\src\\test\\resources\\index.html");
+
+        WebElement parentElement = driver.findElement(By.cssSelector("#selectorResult > div.noSel"));
+
+        WebElement header = parentElement.findElement(By.tagName("h1"));
     }
 }

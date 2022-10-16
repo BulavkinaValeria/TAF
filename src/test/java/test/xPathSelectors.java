@@ -12,7 +12,7 @@ import services.BrowsersService;
 public class xPathSelectors {
     private WebDriver driver;
 
-    private static String absolutePath = "/html/body/div";
+    private static String absolutePath = "/html/body/div"; //абсолютный путь - нельзя
 
     private static String allElementsInHTMLPath = "//*";  // Все элементы на странице начиная с html - тэга
 
@@ -20,9 +20,9 @@ public class xPathSelectors {
 
     private static String childPath = "//form/input";  // Дочерний элемент относительно родителя
 
-    private static String tagWithAttrPath = "//span[@id='access--1']";  // Поиск элемента с аттрибутом и его значением
+    private static String tagWithAttrPath = "//span[@id='access--1']";  // Поиск элемента с аттрибутом и его значением - имя атрибута с собакой - должно быть обязательно имя тега или *
 
-    private static String parentPath1 = "//span[@id='access--1']//..";  // Поиск родителя у элемента с аттрибутом и его значением
+    private static String parentPath1 = "//span[@id='access--1']//..";  // Поиск родителя у элемента с аттрибутом и его значением (id и класс в отличии от css обычный атрибут)
     private static String parentPath2 = "//*[@id='suite_mode_single']/parent::label;";  // Поиск родителя у элемента с аттрибутом и его значением
 
     private static String elementByIndexPath = "(//form)[4]";  // Поиск элемента по индексу
