@@ -70,6 +70,7 @@ public class HWTest extends BaseTest {
         fileUploadPath.sendKeys(pathToFile);
         wait.waitForExists(By.id("file-submit")).submit();
 
+
         Thread.sleep(5000);
     }
 
