@@ -12,7 +12,7 @@ import services.BrowsersService;
 public class xPathSelectors {
     private WebDriver driver;
 
-    private static String absolutePath = "/html/body/div"; //абсолютный путь - нельзя
+    private static String absolutePath = "/html/body/div"; //абсолютный путь - нельзя использовать
 
     private static String allElementsInHTMLPath = "//*";  // Все элементы на странице начиная с html - тэга
 

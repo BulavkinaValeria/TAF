@@ -101,7 +101,7 @@ public class CssSelectorsTest {
         // Поиск элемента с тэгом p и которым является последним дочерним элементом
         Assert.assertEquals(2, driver.findElements(By.cssSelector("p:last-child")).size());
 
-        // Поиск элемента с тэгом p и которым является n-ым дочерним элементом
+        // Поиск элемента с тэгом p и которым является n-ым дочерним элементом (отсчет с единицы (1))
         Assert.assertEquals(1, driver.findElements(By.cssSelector("p:nth-child(2)")).size());
 
     }
