@@ -46,7 +46,7 @@ public class CssSelectorsTest {
         // Поиск по class с учетом иерархи
         Assert.assertEquals(2, driver.findElements(By.cssSelector("#Lastname .markup")).size());
 
-        // Поиск всех элементов с тэгом h1 или p
+        // Поиск всех элементов с тэгом h1 или p (или такое значение, или такое - для этого используется запятая)
         Assert.assertEquals(8, driver.findElements(By.cssSelector("h1, p")).size());
 
         // Поиск всех элементов с тэгом p у которых непосредственный родитель с тэгом div
@@ -89,7 +89,7 @@ public class CssSelectorsTest {
         // Поиск всех enabled элементов
         Assert.assertEquals(8, driver.findElements(By.cssSelector(":enabled")).size());
 
-        // Поиск всех выборанных элементов
+        // Поиск всех выбранных элементов
         Assert.assertEquals(2, driver.findElements(By.cssSelector(":checked")).size());
 
         // Поиск всех элементов c пустым телом
