@@ -11,8 +11,11 @@
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
+
         <aspectj.version>1.8.10</aspectj.version>
         <testing.version>7.6.1</testing.version>
+
+        <test.suite.filename>general.hml</test.suite.filename>
     </properties>
 
     <dependencies>
@@ -44,7 +47,8 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <suiteXmlFiles>
-                        <suiteXmlFile>target/test-classes/group.xml</suiteXmlFile>
+                        <!--suiteXmlFile>target/test-classes/${test.suite.filename}</suiteXmlFile-->
+                        <!--suiteXmlFile>target/test-classes/${xmlSuiteFilename}</suiteXmlFile-->
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>
