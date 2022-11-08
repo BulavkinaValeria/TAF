@@ -1,11 +1,13 @@
 package test;
 
-import io.qameta.allure.Issue;
-import io.qameta.allure.Link;
-import io.qameta.allure.TmsLink;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
+//Epic -> Feature -> Story
+@Epic("Epic 1")
+@Feature("Feature 1")
 public class AllureTest {
 
     @Test
@@ -26,4 +28,29 @@ public class AllureTest {
     public void linkTest(){
         Assert.assertTrue(true);
     }
+
+    @Test (description = "Описание теста")
+    public void descriptionTest(){
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    @Description("Описание теста Allure")
+    public void descriptionTest1(){
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    @Severity(SeverityLevel.BLOCKER)
+    public void severityTest(){
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    @Story("Test Story 1")
+    public void storyTest(){
+        Assert.assertTrue(true);
+    }
+
+
 }
