@@ -15,19 +15,18 @@ public class LoginStep extends BaseStep {
         loginPage = new LoginPage(driver);
     }
 
-    @Step
-    public void login(String email, String psw) {
+        public void login(String email, String psw) {
         loginPage.setEmail(email);
         loginPage.setPsw(psw);
         loginPage.clickLoginButton();
     }
-
+    @Step
     public DashboardPage loginSuccessful(String email, String psw) {
         login(email, psw);
 
         return new DashboardPage(driver);
     }
-
+    @Step
     public LoginPage loginIncorrect(String email, String psw) {
         login(email, psw);
 
