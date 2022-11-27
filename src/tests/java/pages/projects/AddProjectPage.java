@@ -12,11 +12,6 @@ public class AddProjectPage extends BaseProjectPage{
         super(driver);
     }
 
-    @Override
-    protected By getPageIdentifier() {
-        return null;
-    }
-
     public WebElement getSaveButton() {
         return driver.findElement(saveButtonLocator);
     }

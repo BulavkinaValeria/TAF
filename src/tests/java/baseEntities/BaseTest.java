@@ -4,7 +4,6 @@ import configuration.ReadProperties;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.decorators.WebDriverDecorator;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -12,9 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import services.BrowsersService;
 import steps.LoginStep;
-import steps.NavigatioStep;
 import utils.InvokedListener;
-import utils.Listener;
 
 @Listeners(InvokedListener.class)
 public class BaseTest {
