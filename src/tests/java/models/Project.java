@@ -10,6 +10,15 @@ public class Project {
     private boolean access;
     private boolean deleted;
 
+    /*public Project(String name, String description, int type, boolean showAnon, boolean access, boolean deleted) {
+        this.name = name;
+        this.description = description;
+        this.type = type;
+        this.showAnon = showAnon;
+        this.access = access;
+        this.deleted = deleted;
+    }*/
+
     public boolean isDeleted() {
         return deleted;
     }
