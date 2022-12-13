@@ -35,4 +35,11 @@ public class ReadProperties {
     public static boolean isHeadless() {
         return properties.getProperty("headless").equalsIgnoreCase("true");
     }
+
+    public static String usernameStandard() {
+        return properties.getProperty("usernameStandard");
+    }
+    public static String password() {
+        return properties.getProperty("password");
+    }
 }
