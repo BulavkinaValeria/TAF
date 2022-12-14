@@ -1,6 +1,7 @@
 package defs;
 
 import com.codeborne.selenide.Condition;
+import configuration.ReadProperties;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -26,15 +27,8 @@ public class LoginStepDef {
         webdriver().shouldHave(url("https://www.saucedemo.com/inventory.html"));
     }
 
-
-    @Then("user should receive {string}")
-    public void userErrorText(String text) {
-        $(By.tagName("h3")).shouldHave(Condition.text(text));
-    }
-
-    @When("user enter <Username> and <Password>")
-    public void userLogin(String username, String password) {
+    @When("user enter Username and Password")
+    public void userLogin() {
         LoginStep loginStep = new LoginStep();
-        loginStep.loginSuccessful(username, password);
-    }
+        loginStep.loginSuccessful(ReadProperties.usernameStandard(),ReadProperties.password());    }
 }
