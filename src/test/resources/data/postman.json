@@ -1,0 +1,151 @@
+{
+  "info": {
+    "_postman_id": "90967897-90cd-49e8-a96b-ab0eed54f29c",
+    "name": "Task TestRail Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24416188"
+  },
+  "item": [
+    {
+      "name": "Add Project",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "U6sQeMuPmd5yvbkPLui/",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "fshdvhfskvskbv2@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Project X\",\r\n    \"announcement\": \"Welcome to project X\",\r\n    \"show_announcement\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/index.php?/api/v2/add_project",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "index.php"
+          ],
+          "query": [
+            {
+              "key": "/api/v2/add_project",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Miliestones",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "U6sQeMuPmd5yvbkPLui/",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "fshdvhfskvskbv2@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Release 2.0\",\r\n    \"due_on\": 1394596385\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/index.php?/api/v2/add_milestone/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "index.php"
+          ],
+          "query": [
+            {
+              "key": "/api/v2/add_milestone/1",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Miliestones",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "U6sQeMuPmd5yvbkPLui/",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "fshdvhfskvskbv2@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"is_started\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/index.php?/api/v2/update_milestone/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "index.php"
+          ],
+          "query": [
+            {
+              "key": "/api/v2/update_milestone/1",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
